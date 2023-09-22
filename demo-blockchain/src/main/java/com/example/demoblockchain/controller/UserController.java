@@ -8,7 +8,7 @@ import com.example.demoblockchain.service.UserService;
 
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/v1")
 public class UserController {
 
   @Autowired
@@ -23,22 +23,22 @@ public class UserController {
     userService.saveUser(user);
   }
 
-  @GetMapping("/{userName}")
+  @GetMapping("/getusername/{userName}")
   public User getUserByUserName(@PathVariable String userName) {
     return userService.findUserByUserName(userName);
   }
 
-  @PutMapping("/update")
+  @PutMapping("/updateupdate")
   public long updateUser(@RequestBody User user) {
     return userService.updateUser(user);
   }
 
-  @DeleteMapping("/delete/{id}")
+  @DeleteMapping("/deleteuserby/{id}")
   public void deleteUserById(@PathVariable Long id) {
     userService.deleteUserById(id);
   }
 
-  @GetMapping("/{id}")
+  @GetMapping("/getuserbyid/{id}")
   public User getUserById(@PathVariable Long id) {
     return userService.findUserById(id);
   }
