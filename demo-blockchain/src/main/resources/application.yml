@@ -1,0 +1,14 @@
+server.port: 9080
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: testblockchain # Set your desired database name here
+      uri: mongodb://localhost:27017/testblockchain
+
+# logging:
+#   level:
+#     root: DEBUG
+#   org.springframework.data: DEBUG
